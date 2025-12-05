@@ -1,0 +1,37 @@
+{
+  "name": "k6-framework",
+  "version": "1.0.0",
+  "description": "A comprehensive k6 performance testing framework starter kit with integrated HTML reporting",
+  "main": "index.js",
+  "scripts": {
+    "test:smoke": "k6 run tests/smoke/basic-http-test.js",
+    "test:load": "k6 run tests/load/advanced-load-test.js",
+    "test:stress": "k6 run tests/stress/stress-test.js",
+    "test:auth": "k6 run tests/scenarios/auth-example.js",
+    "test:data-driven": "k6 run tests/scenarios/data-driven-test.js",
+    "test:journey": "k6 run tests/scenarios/ecommerce-journey.js",
+    "test:all": "npm run test:smoke && npm run test:load",
+    "example:websocket": "k6 run examples/websocket-example.js",
+    "example:graphql": "k6 run examples/graphql-example.js",
+    "example:upload": "k6 run examples/file-upload-example.js",
+    "report": "open reports/summary.html || xdg-open reports/summary.html || start reports/summary.html"
+  },
+  "keywords": [
+    "k6",
+    "performance-testing",
+    "load-testing",
+    "stress-testing",
+    "api-testing",
+    "framework",
+    "starter-kit"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MusabRehman03/k6-Framework.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
