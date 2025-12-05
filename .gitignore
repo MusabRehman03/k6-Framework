@@ -1,0 +1,30 @@
+# k6 Reports
+reports/*.html
+reports/*.json
+
+# Node modules (if using npm for any utilities)
+node_modules/
+package-lock.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env.local
+.env.*.local
+
+# Temporary files
+tmp/
+temp/
+*.tmp
