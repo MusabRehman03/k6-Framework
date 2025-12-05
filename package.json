@@ -9,7 +9,11 @@
     "test:stress": "k6 run tests/stress/stress-test.js",
     "test:auth": "k6 run tests/scenarios/auth-example.js",
     "test:data-driven": "k6 run tests/scenarios/data-driven-test.js",
+    "test:journey": "k6 run tests/scenarios/ecommerce-journey.js",
     "test:all": "npm run test:smoke && npm run test:load",
+    "example:websocket": "k6 run examples/websocket-example.js",
+    "example:graphql": "k6 run examples/graphql-example.js",
+    "example:upload": "k6 run examples/file-upload-example.js",
     "report": "open reports/summary.html || xdg-open reports/summary.html || start reports/summary.html"
   },
   "keywords": [
