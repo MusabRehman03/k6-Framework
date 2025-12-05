@@ -242,15 +242,18 @@ export default function(data) {
       transactionMetrics.checkoutDuration.add(Date.now() - startTime);
       transactionMetrics.transactionSuccess.add(checkoutSuccess);
       
-      if (checkoutSuccess) {
-        console.log(`✅ User ${__VU} completed checkout successfully`);
+      // Log occasionally to avoid performance impact (every 50th iteration for VU 1 only)
+      if (checkoutSuccess && __VU === 1 && __ITER % 50 === 0) {
+        console.log(`✅ Checkout successful (VU ${__VU}, iteration ${__ITER})`);
       }
       
       sleep(1);
     });
   } else {
-    // User abandons cart
-    console.log(`⚠️ User ${__VU} abandoned cart`);
+    // User abandons cart - log occasionally (every 50th iteration for VU 1 only)
+    if (__VU === 1 && __ITER % 50 === 0) {
+      console.log(`⚠️ Cart abandoned (VU ${__VU}, iteration ${__ITER})`);
+    }
   }
   
   // Session end - think time before next iteration

@@ -44,11 +44,13 @@ export function randomItem(array) {
 }
 
 /**
- * Sleep for a random duration between min and max seconds
- * @param {number} min - Minimum sleep time in seconds
- * @param {number} max - Maximum sleep time in seconds
+ * Calculate a random duration between min and max seconds
+ * Note: This returns the duration value - use with sleep() function
+ * @param {number} min - Minimum duration in seconds
+ * @param {number} max - Maximum duration in seconds
+ * @returns {number} - Random duration in seconds
  */
-export function randomSleep(min, max) {
+export function randomDuration(min, max) {
   const duration = Math.random() * (max - min) + min;
   return duration;
 }
